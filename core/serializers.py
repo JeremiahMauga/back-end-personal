@@ -33,7 +33,7 @@ class UserSerializerWithToken(ModelSerializer):
 class InventorySerializer(ModelSerializer):
     class Meta:
         model = Inventory
-        fields = ('id', 'game_title', 'user')
+        fields = ('id', 'game_title', 'voter', 'votes')
 
 ## Serializes current user
 class UserSerializer(ModelSerializer):

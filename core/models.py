@@ -5,10 +5,10 @@ from django.db.models.fields import NullBooleanField
 
 class Inventory(models.Model):
     game_title = models.CharField(max_length=100)
-    voters = models.CharField(max_length=100)
-    user = models.ForeignKey(User, related_name="inventory", on_delete=models.CASCADE)
+    voter = models.CharField(max_length=100)
+    votes = models.IntegerField()
 
     def __str__(self):
-        return f"User: {self.user} Game Title: {self.game_title}"
+        return f"Game Title: {self.game_title} Voter: {self.voter} Votes: {self.votes}"
 
 
